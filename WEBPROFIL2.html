@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Iskandar Arifin - Guru SMP Negeri 34 Kota Tangerang</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            khaki: {
+              DEFAULT: '#8C6D3B',
+              dark: '#5A4321',
+              light: '#B5965A',
+              warm: '#F8F5F0',
+              gold: '#D4AF37',
+              shine: '#FFF5C0'
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.4s ease-out forwards',
+          },
+          keyframes: {
+            'fadeIn': {
+              '0%': { opacity: '0', transform: 'translateY(10px) scale(0.98)' },
+              '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes moveGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animated-gradient-line {
+      background: linear-gradient(270deg, #5A4321, #8C6D3B, #D4AF37, #FFF5C0, #D4AF37, #8C6D3B, #5A4321);
+      background-size: 400% 400%;
+      animation: moveGradient 3.5s linear infinite;
+    }
+
+    .glowing-ring {
+      position: relative;
+      border-radius: 9999px;
+    }
+    .glowing-ring::before {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border-radius: 9999px;
+      background: linear-gradient(45deg, #8C6D3B, #D4AF37, #FFF5C0, #B5965A, #8C6D3B, #D4AF37);
+      background-size: 400% 400%;
+      animation: moveGradient 3s linear infinite;
+      filter: blur(6px);
+      opacity: 0.85;
+    }
+    .glowing-ring::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 9999px;
+      background: linear-gradient(45deg, #8C6D3B, #D4AF37, #FFF5C0, #B5965A, #8C6D3B);
+      background-size: 400% 400%;
+      animation: moveGradient 3s linear infinite;
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #8C6D3B, #D4AF37);
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#F8F5F0] text-slate-800 font-sans h-screen overflow-hidden flex flex-col justify-between selection:bg-khaki-gold selection:text-white">
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="relative z-20 bg-white/95 backdrop-blur-md shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="relative w-10 h-10 rounded-full glowing-ring p-[2px] flex items-center justify-center">
+          <img src="images/profil.jpg" alt="Iskandar Arifin" class="relative z-10 w-full h-full object-cover object-top rounded-full border border-white" onerror="this.src='https://via.placeholder.com/150'">
+        </div>
+        <div>
+          <h1 class="font-bold text-sm sm:text-base text-slate-900 leading-tight">Iskandar Arifin, S.Kom</h1>
+          <p class="text-xs text-khaki-DEFAULT font-semibold">Guru SMP Negeri 34 Kota Tangerang</p>
+        </div>
+      </div>
+
+      <!-- DESKTOP NAV TABS -->
+      <nav class="hidden md:flex items-center space-x-1 text-sm font-medium">
+        <button onclick="switchTab(1)" id="nav-1" class="nav-btn px-3.5 py-2 rounded-xl transition-all">Profil</button>
+        <button onclick="switchTab(2)" id="nav-2" class="nav-btn px-3.5 py-2 rounded-xl transition-all">Biodata</button>
+        <button onclick="switchTab(3)" id="nav-3" class="nav-btn px-3.5 py-2 rounded-xl transition-all">CV & Karir</button>
+        <button onclick="switchTab(4)" id="nav-4" class="nav-btn px-3.5 py-2 rounded-xl transition-all">Galeri</button>
+        <button onclick="switchTab(5)" id="nav-5" class="nav-btn px-3.5 py-2 rounded-xl transition-all">Materi</button>
+        <button onclick="switchTab(6)" id="nav-6" class="nav-btn px-3.5 py-2 rounded-xl transition-all">Kontak</button>
+      </nav>
+    </div>
+
+    <!-- GARIS GRADASI BERGERAK -->
+    <div class="h-[4px] w-full animated-gradient-line shadow-sm"></div>
+  </header>
+
+  <!-- MAIN APP CONTAINER (1 SCREEN FIT) -->
+  <main class="flex-1 relative max-w-5xl w-full mx-auto p-4 sm:p-6 overflow-hidden flex items-center justify-center">
+
+    <!-- PAGE 1: PROFIL SINGKAT -->
+    <section id="page-1" class="page-content w-full h-full flex items-center justify-center animate-fade-in py-2">
+      <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        
+        <div class="md:col-span-5 flex justify-center items-center">
+          <div class="relative group max-w-[240px] sm:max-w-[270px] w-full">
+            <div class="absolute -inset-2 rounded-3xl animated-gradient-line blur-lg opacity-80 group-hover:opacity-100 transition duration-500"></div>
+            <div class="relative rounded-2xl overflow-hidden bg-gradient-to-b from-white via-amber-50 to-[#F8F5F0] border-2 border-white shadow-2xl flex justify-center items-end min-h-[310px] sm:min-h-[380px]">
+              <img src="images/profil.jpg" alt="Iskandar Arifin" class="w-full h-auto max-h-[350px] sm:max-h-[420px] object-contain object-bottom transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://via.placeholder.com/400x550?text=profil.jpg'">
+              
+              <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md px-3 py-2 rounded-xl shadow-lg border border-amber-900/10 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider">Guru Informatika & KKA</span>
+                </div>
+                <span class="text-xs text-khaki-DEFAULT font-bold">IA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-7 text-center md:text-left space-y-4">
+          <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-900/5 text-khaki-dark border border-khaki-gold/40 shadow-sm">
+            <svg class="w-4 h-4 text-khaki-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356.257l4 4a1 1 0 001.388-1.388l-3.328-3.329 6.72-2.88a1 1 0 000-1.84l-7-3z"/></svg>
+            <span>Aparatur Sipil Negara & Tenaga Pendidik</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+            Iskandar Arifin,<span class="text-khaki-DEFAULT font-semibold">S.Kom</span>
+          </h2>
+
+          <div class="h-[3px] w-24 mx-auto md:mx-0 animated-gradient-line rounded-full"></div>
+
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+            Mendidik dengan ketulusan, mengabdi dengan integritas. Berkomitmen menciptakan pembelajaran yang kreatif, inovatif, serta berdampak positif bagi masa depan generasi bangsa di Kota Tangerang.
+          </p>
+
+          <div class="pt-3 flex flex-wrap justify-center md:justify-start gap-3">
+            <button onclick="switchTab(2)" class="relative group p-[2px] rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform">
+              <div class="absolute inset-0 animated-gradient-line"></div>
+              <div class="relative px-6 py-3 rounded-[10px] bg-slate-900 text-white font-semibold text-sm flex items-center space-x-2">
+                <span>Jelajahi Biodata & CV</span>
+                <svg class="w-4 h-4 text-khaki-shine" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
+            </button>
+
+            <button onclick="switchTab(5)" class="px-5 py-3 rounded-xl font-medium text-sm text-slate-700 bg-white border border-slate-300 shadow-sm hover:bg-slate-50 transition">
+              Buka Materi Ajar
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PAGE 2: BIODATA DIRI -->
+    <section id="page-2" class="page-content hidden w-full h-full overflow-y-auto custom-scroll animate-fade-in">
+      <div class="max-w-2xl mx-auto space-y-6 py-4">
+        <div class="pb-3 space-y-2">
+          <h2 class="text-2xl font-bold text-slate-900">Biodata Diri</h2>
+          <p class="text-xs text-slate-500">Informasi pribadi dan identitas resmi kedinasan</p>
+          <div class="h-[3px] w-full animated-gradient-line rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-xl border border-amber-900/10 shadow-sm space-y-1 hover:border-khaki-DEFAULT/40 transition">
+            <span class="text-xs text-slate-400 block font-medium">Nama Lengkap</span>
+            <p class="font-bold text-slate-800">Iskandar Arifin, S.Kom</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-amber-900/10 shadow-sm space-y-1 hover:border-khaki-DEFAULT/40 transition">
+            <span class="text-xs text-slate-400 block font-medium">Profesi / Jabatan</span>
+            <p class="font-bold text-slate-800">Guru Informatika</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-amber-900/10 shadow-sm space-y-1 hover:border-khaki-DEFAULT/40 transition">
+            <span class="text-xs text-slate-400 block font-medium">Unit Kerja</span>
+            <p class="font-bold text-slate-800">SMP Negeri 34 Kota Tangerang</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-amber-900/10 shadow-sm space-y-1 hover:border-khaki-DEFAULT/40 transition">
+            <span class="text-xs text-slate-400 block font-medium">Wilayah Tugas</span>
+            <p class="font-bold text-slate-800">Pinang, Kota Tangerang - Banten</p>
+          </div>
+        </div>
+
+        <div class="relative p-[2px] rounded-xl overflow-hidden shadow-sm">
+          <div class="absolute inset-0 animated-gradient-line"></div>
+          <div class="relative bg-white p-5 rounded-[10px] space-y-2">
+            <h3 class="font-bold text-khaki-dark text-sm flex items-center space-x-2">
+              <svg class="w-4 h-4 text-khaki-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <span>Prinsip & Dedikasi Kerja</span>
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Menjunjung tinggi integritas, kejelasan informasi, serta komitmen penuh dalam menyajikan pembelajaran yang bermakna bagi setiap peserta didik.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-between pt-4">
+          <button onclick="switchTab(1)" class="px-4 py-2 rounded-xl text-sm bg-white text-slate-700 border border-slate-300 shadow-sm hover:bg-slate-50">← Kembali</button>
+          <button onclick="switchTab(3)" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-900 animated-gradient-line shadow-md hover:scale-105 transition">Lanjut: CV & Karir →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: CV / RESUME -->
+    <section id="page-3" class="page-content hidden w-full h-full overflow-y-auto custom-scroll animate-fade-in">
+      <div class="max-w-2xl mx-auto space-y-6 py-4">
+        <div class="pb-3 space-y-2">
+          <h2 class="text-2xl font-bold text-slate-900">Curriculum Vitae</h2>
+          <p class="text-xs text-slate-500">Riwayat pendidikan dan rekam jejak pengabdian</p>
+          <div class="h-[3px] w-full animated-gradient-line rounded-full"></div>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-sm font-bold text-khaki-dark uppercase tracking-wider">Pengalaman & Pengabdian</h3>
+          
+          <div class="relative pl-6 border-l-2 border-khaki-gold/50 space-y-6">
+            <div class="relative">
+              <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full animated-gradient-line border-2 border-white shadow"></div>
+              <span class="text-xs text-khaki-DEFAULT font-bold uppercase tracking-wide">ASN Pemkot Tangerang</span>
+              <h4 class="font-bold text-slate-900 text-base">Tenaga Pendidik / Guru</h4>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">Mengabdi secara aktif dalam mengampu pembelajaran, merancang metode mengajar interaktif, serta mendukung kegiatan akademik di Kota Tangerang.</p>
+            </div>
+            
+            <div class="relative">
+              <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-400 border-2 border-white shadow"></div>
+              <span class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Pendidikan Formal</span>
+              <h4 class="font-bold text-slate-900 text-base">Sarjana Komputer (S.Kom)</h4>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">Penguasaan ilmu komputer, logika pemrograman, rekayasa perangkat lunak, basis data, jaringan komputer, kecerdasan buatan (AI), serta analisis sistem.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between pt-4">
+          <button onclick="switchTab(2)" class="px-4 py-2 rounded-xl text-sm bg-white text-slate-700 border border-slate-300 shadow-sm hover:bg-slate-50">← Kembali</button>
+          <button onclick="switchTab(4)" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-900 animated-gradient-line shadow-md hover:scale-105 transition">Lanjut: Galeri →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: GALERI & KEGIATAN -->
+    <section id="page-4" class="page-content hidden w-full h-full overflow-y-auto custom-scroll animate-fade-in">
+      <div class="max-w-3xl mx-auto space-y-6 py-4">
+        <div class="pb-3 space-y-2">
+          <h2 class="text-2xl font-bold text-slate-900">Galeri Kegiatan</h2>
+          <p class="text-xs text-slate-500">Klik foto di bawah untuk memperbesar tampilan</p>
+          <div class="h-[3px] w-full animated-gradient-line rounded-full"></div>
+        </div>
+
+        <!-- GRID FOTO GALERI -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          
+          <div onclick="openLightbox('images/galeri-1.jpg', 'Suasana Belajar di Kelas')" class="cursor-pointer relative p-[2px] rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition">
+            <div class="absolute inset-0 animated-gradient-line opacity-70 group-hover:opacity-100 transition"></div>
+            <div class="relative bg-white rounded-[10px] overflow-hidden">
+              <div class="h-40 overflow-hidden bg-slate-100">
+                <img src="images/galeri-1.jpg" alt="Kegiatan 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x300?text=galeri-1.jpg'">
+              </div>
+              <div class="p-3">
+                <span class="text-[10px] font-bold text-khaki-DEFAULT uppercase tracking-wider">Kegiatan KBM</span>
+                <h4 class="text-xs font-bold text-slate-800 mt-0.5">Suasana Belajar di Kelas 🔍</h4>
+              </div>
+            </div>
+          </div>
+
+          <div onclick="openLightbox('images/galeri-2.jpg', 'Agenda Apel & Upacara')" class="cursor-pointer relative p-[2px] rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition">
+            <div class="absolute inset-0 animated-gradient-line opacity-70 group-hover:opacity-100 transition"></div>
+            <div class="relative bg-white rounded-[10px] overflow-hidden">
+              <div class="h-40 overflow-hidden bg-slate-100">
+                <img src="images/galeri-2.jpg" alt="Kegiatan 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x300?text=galeri-2.jpg'">
+              </div>
+              <div class="p-3">
+                <span class="text-[10px] font-bold text-khaki-DEFAULT uppercase tracking-wider">Kedinasan</span>
+                <h4 class="text-xs font-bold text-slate-800 mt-0.5">Agenda Apel & Upacara 🔍</h4>
+              </div>
+            </div>
+          </div>
+
+          <div onclick="openLightbox('images/galeri-3.jpg', 'Workshop & Pelatihan')" class="cursor-pointer relative p-[2px] rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition">
+            <div class="absolute inset-0 animated-gradient-line opacity-70 group-hover:opacity-100 transition"></div>
+            <div class="relative bg-white rounded-[10px] overflow-hidden">
+              <div class="h-40 overflow-hidden bg-slate-100">
+                <img src="images/galeri-3.jpg" alt="Kegiatan 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x300?text=galeri-3.jpg'">
+              </div>
+              <div class="p-3">
+                <span class="text-[10px] font-bold text-khaki-DEFAULT uppercase tracking-wider">Pengembangan</span>
+                <h4 class="text-xs font-bold text-slate-800 mt-0.5">Workshop & Pelatihan 🔍</h4>
+              </div>
+            </div>
+          </div>
+
+          <div onclick="openLightbox('images/galeri-4.jpg', 'Bimbingan Siswa')" class="cursor-pointer relative p-[2px] rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition">
+            <div class="absolute inset-0 animated-gradient-line opacity-70 group-hover:opacity-100 transition"></div>
+            <div class="relative bg-white rounded-[10px] overflow-hidden">
+              <div class="h-40 overflow-hidden bg-slate-100">
+                <img src="images/galeri-4.jpg" alt="Kegiatan 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x300?text=galeri-4.jpg'">
+              </div>
+              <div class="p-3">
+                <span class="text-[10px] font-bold text-khaki-DEFAULT uppercase tracking-wider">Pendampingan</span>
+                <h4 class="text-xs font-bold text-slate-800 mt-0.5">Bimbingan Siswa 🔍</h4>
+              </div>
+            </div>
+          </div>
+
+          <div onclick="openLightbox('images/galeri-5.jpg', 'Peringatan Hari Besar')" class="cursor-pointer relative p-[2px] rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition">
+            <div class="absolute inset-0 animated-gradient-line opacity-70 group-hover:opacity-100 transition"></div>
+            <div class="relative bg-white rounded-[10px] overflow-hidden">
+              <div class="h-40 overflow-hidden bg-slate-100">
+                <img src="images/galeri-5.jpg" alt="Kegiatan 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x300?text=galeri-5.jpg'">
+              </div>
+              <div class="p-3">
+                <span class="text-[10px] font-bold text-khaki-DEFAULT uppercase tracking-wider">Acara Sekolah</span>
+                <h4 class="text-xs font-bold text-slate-800 mt-0.5">Peringatan Hari Besar 🔍</h4>
+              </div>
+            </div>
+          </div>
+
+          <div onclick="openLightbox('images/galeri-6.jpg', 'Rapat Rekan Sejawat')" class="cursor-pointer relative p-[2px] rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition">
+            <div class="absolute inset-0 animated-gradient-line opacity-70 group-hover:opacity-100 transition"></div>
+            <div class="relative bg-white rounded-[10px] overflow-hidden">
+              <div class="h-40 overflow-hidden bg-slate-100">
+                <img src="images/galeri-6.jpg" alt="Kegiatan 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x300?text=galeri-6.jpg'">
+              </div>
+              <div class="p-3">
+                <span class="text-[10px] font-bold text-khaki-DEFAULT uppercase tracking-wider">Kebersamaan</span>
+                <h4 class="text-xs font-bold text-slate-800 mt-0.5">Rapat Rekan Sejawat 🔍</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex justify-between pt-4">
+          <button onclick="switchTab(3)" class="px-4 py-2 rounded-xl text-sm bg-white text-slate-700 border border-slate-300 shadow-sm hover:bg-slate-50">← Kembali</button>
+          <button onclick="switchTab(5)" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-900 animated-gradient-line shadow-md hover:scale-105 transition">Lanjut: Materi Ajar →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: MATERI BERDASARKAN MAPEL & FOLDER -->
+    <section id="page-5" class="page-content hidden w-full h-full overflow-y-auto custom-scroll animate-fade-in">
+      <div class="max-w-3xl mx-auto space-y-5 py-4">
+        <div class="pb-2 space-y-2">
+          <h2 class="text-2xl font-bold text-slate-900">Materi & Slide Pembelajaran</h2>
+          <p class="text-xs text-slate-500">Pilih mata pelajaran di bawah ini untuk melihat materi terkait</p>
+          <div class="h-[3px] w-full animated-gradient-line rounded-full"></div>
+        </div>
+
+        <!-- TOMBOL PILIHAN MAPEL TANPA ANGKA -->
+        <div class="flex flex-wrap gap-2">
+          <button onclick="changeSlide('informatika')" id="btn-informatika" class="materi-tab px-4 py-2 rounded-lg text-xs font-bold bg-slate-900 text-white shadow-sm transition">
+            Informatika
+          </button>
+          <button onclick="changeSlide('kka')" id="btn-kka" class="materi-tab px-4 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 transition">
+            KKA (Koding & AI)
+          </button>
+          <button onclick="changeSlide('project')" id="btn-project" class="materi-tab px-4 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 transition">
+            Project
+          </button>
+        </div>
+
+        <!-- LAYAR PRESENTASI -->
+        <div class="relative p-[3px] rounded-2xl overflow-hidden shadow-lg">
+          <div class="absolute inset-0 animated-gradient-line"></div>
+          <div class="relative bg-slate-900 rounded-[13px] overflow-hidden">
+            
+            <div class="bg-white px-4 py-2.5 flex items-center justify-between border-b border-slate-200">
+              <div>
+                <h3 id="slide-title" class="text-xs sm:text-sm font-bold text-slate-800">Materi Mata Pelajaran Informatika</h3>
+                <p id="slide-desc" class="text-[11px] text-slate-500">File: materi/informatika/materi.pdf</p>
+              </div>
+              <a id="slide-download" href="materi/informatika/materi.pdf" download class="px-3 py-1.5 rounded-lg text-[11px] font-bold bg-amber-900/10 text-khaki-dark hover:bg-amber-900/20 transition flex items-center space-x-1">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Unduh File</span>
+              </a>
+            </div>
+
+            <div class="relative w-full h-[360px] sm:h-[420px] bg-slate-800">
+              <iframe 
+                id="ppt-frame"
+                src="materi/informatika/materi.pdf#toolbar=0&navpanes=0" 
+                class="w-full h-full border-0">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="flex justify-between pt-2">
+          <button onclick="switchTab(4)" class="px-4 py-2 rounded-xl text-sm bg-white text-slate-700 border border-slate-300 shadow-sm hover:bg-slate-50">← Kembali</button>
+          <button onclick="switchTab(6)" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-900 animated-gradient-line shadow-md hover:scale-105 transition">Lanjut: Kontak →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: KONTAK & PESAN LANGSUNG KE WHATSAPP -->
+    <section id="page-6" class="page-content hidden w-full h-full overflow-y-auto custom-scroll animate-fade-in">
+      <div class="max-w-xl mx-auto space-y-6 py-4">
+        <div class="pb-3 space-y-2">
+          <h2 class="text-2xl font-bold text-slate-900">Hubungi Saya</h2>
+          <p class="text-xs text-slate-500">Kirimkan pesan Anda langsung ke WhatsApp saya</p>
+          <div class="h-[3px] w-full animated-gradient-line rounded-full"></div>
+        </div>
+
+        <form onsubmit="kirimKeWhatsApp(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Nama Lengkap</label>
+            <input type="text" id="wa-nama" required placeholder="Masukkan nama Anda" class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-khaki-DEFAULT focus:ring-1 focus:ring-khaki-DEFAULT shadow-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Asal / Kelas / Instansi</label>
+            <input type="text" id="wa-asal" required placeholder="Contoh: Siswa Kelas 8A / Orang Tua / Rekan Guru" class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-khaki-DEFAULT focus:ring-1 focus:ring-khaki-DEFAULT shadow-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Isi Pesan</label>
+            <textarea rows="3" id="wa-pesan" required placeholder="Tuliskan pesan atau keperluan Anda..." class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-khaki-DEFAULT focus:ring-1 focus:ring-khaki-DEFAULT shadow-sm"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3 rounded-xl font-bold text-sm text-slate-900 animated-gradient-line shadow-md hover:opacity-95 transition flex items-center justify-center space-x-2">
+            <svg class="w-5 h-5 text-emerald-800" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+            <span>Kirim Pesan via WhatsApp</span>
+          </button>
+        </form>
+
+        <div class="flex justify-start pt-2">
+          <button onclick="switchTab(5)" class="px-4 py-2 rounded-xl text-sm bg-white text-slate-700 border border-slate-300 shadow-sm hover:bg-slate-50">← Kembali ke Materi</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- POP-UP LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl border-2 border-khaki-gold animate-fade-in" onclick="event.stopPropagation()">
+      <div class="bg-slate-900 px-4 py-3 flex items-center justify-between">
+        <h3 id="lightbox-caption" class="text-xs sm:text-sm font-bold text-white">Judul Foto</h3>
+        <button onclick="closeLightbox()" class="text-slate-400 hover:text-white font-bold text-lg px-2">✕</button>
+      </div>
+      <div class="p-3 bg-slate-900/90 flex justify-center items-center">
+        <img id="lightbox-img" src="" alt="Zoom Foto" class="max-h-[70vh] w-auto object-contain rounded-lg">
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE BOTTOM NAVIGATION TABS -->
+  <footer class="md:hidden bg-white/95 backdrop-blur-md border-t border-amber-900/10 py-2 px-2 shadow-lg relative z-20">
+    <div class="flex justify-around items-center text-[10px]">
+      <button onclick="switchTab(1)" id="mob-1" class="mob-btn flex flex-col items-center p-1 font-bold">
+        <span>Profil</span>
+      </button>
+      <button onclick="switchTab(2)" id="mob-2" class="mob-btn flex flex-col items-center p-1 text-slate-500">
+        <span>Biodata</span>
+      </button>
+      <button onclick="switchTab(3)" id="mob-3" class="mob-btn flex flex-col items-center p-1 text-slate-500">
+        <span>CV</span>
+      </button>
+      <button onclick="switchTab(4)" id="mob-4" class="mob-btn flex flex-col items-center p-1 text-slate-500">
+        <span>Galeri</span>
+      </button>
+      <button onclick="switchTab(5)" id="mob-5" class="mob-btn flex flex-col items-center p-1 text-slate-500">
+        <span>Materi</span>
+      </button>
+      <button onclick="switchTab(6)" id="mob-6" class="mob-btn flex flex-col items-center p-1 text-slate-500">
+        <span>Kontak</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LIGHTBOX, MATERI, NAV & WHATSAPP -->
+  <script>
+    // ==========================================
+    // GANTI NOMOR WHATSAPP ANDA DI BAWAH INI
+    // Gunakan format kode negara 62 (tanpa tanda + atau angka 0 di depan)
+    // ==========================================
+    const NOMOR_WHATSAPP_TUJUAN = "6289630581502"; 
+
+    function kirimKeWhatsApp(event) {
+      event.preventDefault(); // Mencegah halaman reload
+
+      const nama = document.getElementById('wa-nama').value;
+      const asal = document.getElementById('wa-asal').value;
+      const pesan = document.getElementById('wa-pesan').value;
+
+      // Format pesan yang akan muncul di WhatsApp
+      const teksPesan = `Halo Pak Iskandar Arifin,\n\n*Nama:* ${nama}\n*Asal/Instansi:* ${asal}\n*Pesan:*\n${pesan}`;
+
+      // Encode teks agar aman untuk URL
+      const urlWhatsApp = `https://wa.me/${NOMOR_WHATSAPP_TUJUAN}?text=${encodeURIComponent(teksPesan)}`;
+
+      // Buka WhatsApp di tab baru
+      window.open(urlWhatsApp, '_blank');
+    }
+
+    // Fungsi Membuka Lightbox Foto
+    function openLightbox(imgSrc, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+
+      img.src = imgSrc;
+      cap.textContent = caption;
+      modal.classList.remove('hidden');
+    }
+
+    // Fungsi Menutup Lightbox Foto
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+    }
+
+    // Data Materi Berdasarkan Folder Mapel
+    const daftarMateri = {
+      informatika: {
+        title: "Materi Mata Pelajaran Informatika",
+        file: "materi/informatika/materi.pdf"
+      },
+      kka: {
+        title: "Materi Mata Pelajaran Koding dan Kecerdasan Artifisial (KKA)",
+        file: "materi/kka/materi.pdf"
+      },
+      project: {
+        title: "Dokumentasi & Panduan Project",
+        file: "materi/project/materi.pdf"
+      }
+    };
+
+    function changeSlide(key) {
+      const data = daftarMateri[key];
+      if (!data) return;
+
+      document.getElementById('slide-title').textContent = data.title;
+      document.getElementById('slide-desc').textContent = "File: " + data.file;
+      document.getElementById('ppt-frame').src = data.file + "#toolbar=0&navpanes=0";
+      document.getElementById('slide-download').href = data.file;
+
+      document.querySelectorAll('.materi-tab').forEach(btn => {
+        btn.className = 'materi-tab px-4 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 transition';
+      });
+      const activeBtn = document.getElementById(`btn-${key}`);
+      if (activeBtn) {
+        activeBtn.className = 'materi-tab px-4 py-2 rounded-lg text-xs font-bold bg-slate-900 text-white shadow-sm transition';
+      }
+    }
+
+    function switchTab(pageNum) {
+      document.querySelectorAll('.page-content').forEach(el => el.classList.add('hidden'));
+      const targetPage = document.getElementById(`page-${pageNum}`);
+      if (targetPage) targetPage.classList.remove('hidden');
+
+      document.querySelectorAll('.nav-btn').forEach((btn, idx) => {
+        if (idx + 1 === pageNum) {
+          btn.className = 'nav-btn px-3.5 py-2 rounded-xl transition-all bg-amber-900/10 text-slate-900 font-bold border border-khaki-gold/50 shadow-sm';
+        } else {
+          btn.className = 'nav-btn px-3.5 py-2 rounded-xl transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100';
+        }
+      });
+
+      document.querySelectorAll('.mob-btn').forEach((btn, idx) => {
+        if (idx + 1 === pageNum) {
+          btn.className = 'mob-btn flex flex-col items-center p-1 text-slate-900 font-bold border-b-2 border-khaki-gold';
+        } else {
+          btn.className = 'mob-btn flex flex-col items-center p-1 text-slate-500';
+        }
+      });
+    }
+
+    switchTab(1);
+  </script>
+</body>
+</html>
